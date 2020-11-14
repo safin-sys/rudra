@@ -13,17 +13,14 @@ main {
                 .edu-info {
                     min-width: 600px;
                     .uni {
-                        margin-bottom: 14px;
-                    }
-                    .school {
-                        margin-top: 14px;
+                        margin-bottom: 24px;
                     }
                     .uni,
                     .school {
                         display: flex;
                         justify-content: space-between;
                         .course {
-                            width: 300px;
+                            max-width: 300px;
                             color: #34495e;
                             h1.course-title {
                                 font-weight: 700;
@@ -48,9 +45,34 @@ main {
 
 .badge {
     margin-top: 6px;
-    padding: 6px;
+    padding: 6px !important;
     background-color: #34495e;
     color: white;
     display: inline-block;
     width: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        .cards {
+            .education {
+                .card-content {
+                    .edu-info {
+                        padding: 14px 0;
+                        min-width: auto !important;
+                        .uni,
+                        .school {
+                            flex-direction: column;
+                            p {
+                                padding: 8px 0;
+                            }
+                        }
+                        .school {
+                            margin-top: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
