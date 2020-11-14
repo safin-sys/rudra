@@ -131,7 +131,7 @@ footer {
                 margin: 8px 4px;
                 img {
                     height: 18px;
-                    filter: hue-rotate(90%);
+                    filter: invert(1);
                 }
             }
         }
@@ -146,6 +146,7 @@ footer {
                 display: none;
             }
             button {
+                display: block;
                 border: none;
                 background: none;
                 filter: invert(1);
@@ -186,6 +187,26 @@ footer {
             height: 100%;
             transform: translateY(0px);
             transition: all .2s ease-in-out;
+        }
+    }
+
+    main {
+        .cards {
+            .card-container {
+                .card-content {
+                    flex-direction: column;
+                    p {
+                        padding: 14px 0;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-container {
+            flex-direction: column;
         }
     }
 }
