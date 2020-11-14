@@ -1,0 +1,56 @@
+.about {
+    background-color: #2C3E50;
+    color: white;
+    a {
+        color: white !important;
+    }
+}
+
+main {
+    .cards {
+        .education {
+            .card-content {
+                .edu-info {
+                    min-width: 600px;
+                    .uni {
+                        margin-bottom: 14px;
+                    }
+                    .school {
+                        margin-top: 14px;
+                    }
+                    .uni,
+                    .school {
+                        display: flex;
+                        justify-content: space-between;
+                        .course {
+                            width: 300px;
+                            color: #34495e;
+                            h1.course-title {
+                                font-weight: 700;
+                                font-size: 18px;
+                                max-width: 300px;
+                            }
+                        }
+                        .status {
+                            width: 200px;
+                            font-weight: 300;
+                            p {
+                                width: 200px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.badge {
+    margin-top: 6px;
+    padding: 6px;
+    background-color: #34495e;
+    color: white;
+    display: inline-block;
+    width: auto !important;
+}

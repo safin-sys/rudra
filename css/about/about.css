@@ -1,0 +1,65 @@
+.about {
+  background-color: #2C3E50;
+  color: white;
+}
+
+.about a {
+  color: white !important;
+}
+
+main .cards .education .card-content .edu-info {
+  min-width: 600px;
+}
+
+main .cards .education .card-content .edu-info .uni {
+  margin-bottom: 14px;
+}
+
+main .cards .education .card-content .edu-info .school {
+  margin-top: 14px;
+}
+
+main .cards .education .card-content .edu-info .uni,
+main .cards .education .card-content .edu-info .school {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .cards .education .card-content .edu-info .uni .course,
+main .cards .education .card-content .edu-info .school .course {
+  width: 300px;
+  color: #34495e;
+}
+
+main .cards .education .card-content .edu-info .uni .course h1.course-title,
+main .cards .education .card-content .edu-info .school .course h1.course-title {
+  font-weight: 700;
+  font-size: 18px;
+  max-width: 300px;
+}
+
+main .cards .education .card-content .edu-info .uni .status,
+main .cards .education .card-content .edu-info .school .status {
+  width: 200px;
+  font-weight: 300;
+}
+
+main .cards .education .card-content .edu-info .uni .status p,
+main .cards .education .card-content .edu-info .school .status p {
+  width: 200px;
+  font-size: 12px;
+}
+
+.badge {
+  margin-top: 6px;
+  padding: 6px;
+  background-color: #34495e;
+  color: white;
+  display: inline-block;
+  width: auto !important;
+}
+/*# sourceMappingURL=about.css.map */

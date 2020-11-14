@@ -16,7 +16,10 @@ header {
         margin: auto;
         padding: 0 20vw;
         .nav-logo {
-            color: white;
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
         ul {
             list-style: none;
@@ -39,8 +42,13 @@ header {
 }
 
 main {
+    .index-welcome {
+        background-image: url(../../img/index-bg.jpg);
+    }
+    .about-welcome {
+        background-image: url(../../img/about-bg.jpg);
+    }
     .welcome-container {
-        background-image: url(../img/header-bg.jpg);
         height: 500px;
         display: grid;
         place-content: center;
@@ -74,6 +82,7 @@ main {
                 justify-content: space-around;
                 h1 {
                     font-weight: normal;
+                    max-width: 64px;
                 }
                 p {
                     width: 600px;
@@ -154,12 +163,12 @@ footer {
                 cursor: pointer;
                 height: 24px;
                 width: 24px;
-                background-image: url(../img/ham.svg);
+                background-image: url(../../img/ham.svg);
                 background-repeat: no-repeat;
                 transition: all .2 ease-in;
             }
             .ham-active {
-                background-image: url(../img/close.svg);
+                background-image: url(../../img/close.svg);
                 transition: all .2 ease-in;
             }
         }
