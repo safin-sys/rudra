@@ -44,7 +44,7 @@ header nav ul li a {
   color: white;
 }
 
-header nav .burger-btn button {
+header nav button {
   display: none;
 }
 
