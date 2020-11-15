@@ -48,6 +48,9 @@ main {
     .about-welcome {
         background-image: url(../../img/about-bg.jpg);
     }
+    .soft-welcome {
+        background-image: url(../../img/soft-bg.jpg);
+    }
     .welcome-container {
         height: 500px;
         display: grid;
@@ -143,6 +146,19 @@ footer {
                     filter: invert(1);
                 }
             }
+        }
+    }
+    .author {
+        padding-bottom: 6px;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
 }

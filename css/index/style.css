@@ -61,6 +61,10 @@ main .about-welcome {
   background-image: url(../../img/about-bg.jpg);
 }
 
+main .soft-welcome {
+  background-image: url(../../img/soft-bg.jpg);
+}
+
 main .welcome-container {
   height: 500px;
   display: -ms-grid;
@@ -182,6 +186,22 @@ footer .footer-container .social a img {
   height: 18px;
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+footer .author {
+  padding-bottom: 6px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+footer .author a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .author a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {

@@ -1,0 +1,47 @@
+.soft-content {
+    margin: 64px;
+    .soft {
+        padding: 14px 24px;
+        border-top: 1px solid #e1e4e8;
+        border-bottom: 1px solid #e1e4e8;
+        margin: 24px auto;
+        width: 80vw;
+        h3 {
+            a {
+                font-size: 20px;
+                color: #0366d6 !important;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+        p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #586069;
+        }
+        span {
+            font-size: 14px;
+            font-weight: 300;
+            display: inline-block;
+            margin: 16px 8px 0 0;
+            color: #586069;
+        }
+        .right {
+            float: right;
+        }
+    }
+    .soft:first-child {
+        margin-top: 0;
+    }
+    .soft:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .soft-content {
+        margin: 64px 0;
+    }
+}
