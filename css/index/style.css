@@ -65,6 +65,10 @@ main .soft-welcome {
   background-image: url(../../img/soft-bg.jpg);
 }
 
+main .blog-welcome {
+  background-image: url(../../img/blog-bg.jpg);
+}
+
 main .welcome-container {
   height: 500px;
   display: -ms-grid;

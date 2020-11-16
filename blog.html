@@ -4,8 +4,53 @@
     <link rel="stylesheet" href="css/index/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudra Nil Utsa</title>
+    <title>Blog</title>
 </head>
+<style>
+    .blog-container {
+        padding: 14px 24px;
+        border-top: 1px solid #e1e4e8;
+        border-bottom: 1px solid #e1e4e8;
+        width: 80vw;
+        margin: 24px auto;
+    }
+    .blog-container > h3 > a {
+        font-size: 20px;
+        color: #0366d6 !important;
+        text-decoration: none;
+    }
+    .blog-container > h3 > a:hover {
+        text-decoration: underline;
+
+    }
+    .blog-container > p:nth-of-type(3) {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #586069;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100px;
+        white-space: nowrap;
+        display: block;
+        height: 20px;
+    }
+    
+    .blog-container > p {
+        display: none;
+    }
+    
+    .blog-container > a {
+        color: #586069 !important;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    .blog-container > a:hover {
+        text-decoration: underline;
+    }
+</style>
 <body>
     <header>
         <nav>
@@ -13,7 +58,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#">Blogs</a></li>
                 <li><a href="software.html">Softwares</a></li>
             </ul>
             <button></button>
@@ -22,15 +67,16 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#">Blogs</a></li>
                 <li><a href="software.html">Softwares</a></li>
             </ul>
         </div>
     </header>
+
     <main>
-        <div class="welcome-container index-welcome">
+        <div class="welcome-container blog-welcome">
             <section class="welcome">
-                <h1>Welcome to my website</h1>
+                <h1>Blog</h1>
             </section>
             <section class="sub-welcome">
                 <p>Student | rudranilutsa@gmail.com</p>
@@ -38,31 +84,15 @@
         </div>
 
         <div class="cards">
-            <div class="about card-container">
-                <section class="card-content">
-                    <h1>About</h1>
-                    <p>I am Rudra Nil Utsa, a fellow student of the Department of Marketing at Jahangirnagar University. Honestly, unlike my classmates, my business related skills are not much developed as they should be. I like to spend time writing content as a part time job. I am obsessed with all things tech-related and I spend my free time developing my own softwares.</p>
-                    <a href="about.html">Learn More</a>
-                </section>
-            </div>
-
-            <div class="blog card-container">
-                <section class="card-content">
-                    <h1>Blog</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, laboriosam placeat neque aperiam quas inventore cumque nobis quam vel. Et nam ex voluptatibus. Quibusdam quidem voluptatibus sed mollitia? Tenetur, maxime ullam dicta quod eveniet quasi, voluptatem saepe alias blanditiis, porro consectetur magni accusantium quisquam reiciendis ipsum perspiciatis fugiat? Voluptatum, odit.</p>
-                    <a href="#">My Blog</a>
-                </section>
-            </div>
-
-            <div class="softwares card-container">
-                <section class="card-content">
-                    <h1>Software</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, laboriosam placeat neque aperiam quas inventore cumque nobis quam vel. Et nam ex voluptatibus. Quibusdam quidem voluptatibus sed mollitia? Tenetur, maxime ullam dicta quod eveniet quasi, voluptatem saepe alias blanditiis, porro consectetur magni accusantium quisquam reiciendis ipsum perspiciatis fugiat? Voluptatum, odit.</p>
-                    <a href="#">My Softwares</a>
-                </section>
+            <div class="card-container">
+                <div class="card-content">
+                    <div class="blogs">
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
     <footer>
         <div class="footer-container">
             <h1>Contact</h1>
@@ -91,6 +121,28 @@
         </div>
         <p class="author">Made by <a href="https://github.com/safin-sys" target="_blank">Safin Ahmed</a></p>
     </footer>
+    <script>
+        let html = '';
+        function handleResponse(response) {
+            const blog = document.querySelector('.blogs')
+            const items = response.items;
+            items.forEach(res => {
+                const url = res.url;
+                const title = res.title;
+                const content = res.content;
+                const blogHtml = `
+                    <div class="blog-container">
+                        <h3><a href="${url}">${title}</a></h3>
+                        <p>${content}</p>
+                        <a href="${url}">Continue Reading</a>
+                    </div>
+                `;
+                html += blogHtml
+            })
+            blog.innerHTML = html
+        }
+    </script>
+    <script src="https://www.googleapis.com/blogger/v3/blogs/990517938631563196/posts?callback=handleResponse&key=AIzaSyAJESQB3ddltUcDbZif3LUnX-Gzr18tBRg"></script>
     <script src="script.js"></script>
 </body>
 </html>
