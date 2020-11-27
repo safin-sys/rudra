@@ -63,6 +63,11 @@
     .blog-container > a:hover {
         text-decoration: underline;
     }
+
+    main .cards .card-container .card-content {
+        margin: 64px 0;
+        padding: 0;
+    }
 </style>
 <body>
     <header>
@@ -136,9 +141,9 @@
     </footer>
     <script>
         let html = '';
-        function handleResponse(response) {
+        async function handleResponse(response) {
             const blog = document.querySelector('.blogs')
-            const items = response.items;
+            const items = await response.items;
             items.forEach(res => {
                 const url = res.url;
                 const title = res.title;

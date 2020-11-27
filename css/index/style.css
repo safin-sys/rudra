@@ -265,8 +265,6 @@ footer .author a:hover {
     transition: all .2s ease-in-out;
   }
   main .cards .card-container .card-content {
-    margin: 64px 0;
-    padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
