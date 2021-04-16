@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/index/style.css">
+    <link rel="stylesheet" href="tingle.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rudra Nil Utsa</title>
@@ -92,5 +93,22 @@
         <p class="author">Made by <a href="https://github.com/safin-sys" target="_blank">Safin Ahmed</a></p>
     </footer>
     <script src="script.js"></script>
+    <script src="tingle.min.js"></script>
+    <script>
+        const modal = new tingle.modal({
+            footer: true,
+            stickyFooter: false,
+            closeMethods: ['overlay', 'button', 'escape'],
+            closeLabel: "Close"
+        });
+        modal.setContent(`
+            <h1>This site is deprecated</h1><br>
+            <p>New site is available now, <a href="https://rudranilutsa.netlify.app/">here</a></p>
+        `);
+        modal.addFooterBtn('Close', 'tingle-btn tingle-btn--primary', function () {
+            modal.close()
+        })
+        modal.open()
+    </script>
 </body>
 </html>

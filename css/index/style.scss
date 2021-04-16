@@ -6,6 +6,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.tingle-modal-box__footer {
+    display: flex;
+    .tingle-btn--primary {
+        margin-left: auto !important;
+    }
+}
+
 header {
     background-color: #2C3E50;
     nav {

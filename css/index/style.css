@@ -7,6 +7,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.tingle-modal-box__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tingle-modal-box__footer .tingle-btn--primary {
+  margin-left: auto !important;
+}
+
 header {
   background-color: #2C3E50;
 }
