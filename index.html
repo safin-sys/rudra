@@ -103,10 +103,10 @@
         });
         modal.setContent(`
             <h1>This site is deprecated</h1><br>
-            <p>New site is available now, <a href="https://rudranilutsa.netlify.app/">here</a></p>
+            <p>This site will not receive updates anymore. Click OK to visit my new site or close this dialog if you still want to check this deprecated site.</p>
         `);
         modal.addFooterBtn('Close', 'tingle-btn tingle-btn--primary', function () {
-            modal.close()
+            window.location.href = "https://rudranilutsa.netlify.app"
         })
         modal.open()
     </script>
